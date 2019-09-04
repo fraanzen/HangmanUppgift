@@ -1,31 +1,42 @@
 package se.ecutb.mattias;
 
-import com.sun.org.apache.bcel.internal.generic.ARETURN;
-
 import java.util.Random;
 
 public class Hangman {
     private static Random random = new Random();
     private int maxGuesses;
     private int guessAmount;
-    String[] secretWords = {"police", "grass", "coffee"};
+    private String[] secretWords = {"police", "grass", "coffee"};
+    private char[] guessesArray;
+    private char[] lettersArray;
+    private StringBuilder guessesMade = new StringBuilder();
 
-    public Hangman(String[] secretWords) {
-            this.secretWords = secretWords;
-            guessAmount = 1;
-            maxGuesses = 8;
+    public Hangman(int maxGuesses, int guessAmount, String[] secretWords, char[] guessesArray, char[] lettersArray) {
+        this.maxGuesses = maxGuesses;
+        this.guessAmount = guessAmount;
+        this.secretWords = secretWords;
+        this.guessesArray = guessesArray;
+        this.lettersArray = lettersArray;
     }
 
-    public int getMaxGuesses(){
+    public int getMaxGuesses() {
         return maxGuesses;
     }
 
-    public int getGuessAmount(){
+    public int getGuessAmount() {
         return guessAmount;
     }
 
-    public String[] getSecretWords(){
+    public String[] getSecretWords() {
         return secretWords;
+    }
+
+    public char[] getGuessesArray() {
+        return guessesArray;
+    }
+
+    public char[] getLettersArray() {
+        return lettersArray;
     }
 
     public boolean guesses(String guess) {
