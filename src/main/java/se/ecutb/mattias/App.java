@@ -1,29 +1,33 @@
-package se.
-            ecutb.mattias;
+package se.ecutb.mattias;
 
+import se.ecutb.mattias.model.Hangman;
 
+import java.util.Random;
 import java.util.Scanner;
 
-    public class App {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+public class App {
 
-            boolean keepAlive = true;
-            do {
+    private static String[] randomWords = {"police", "coffee", "computer", "television", "ambulance"};
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        String wordsToGuess = randomWords[random.nextInt(randomWords.length)];
+        Hangman game = new Hangman(wordsToGuess);
+        System.out.println("******Welcome to Hangman!******\n" + "You have 8 tries to guess the secret word.\n" + "Guess a single letter or a whole word.\n" + "GOOD LUCK!");
+
+        do {
+            game.getUsedLetters();
+            System.out.println("Make your guess");
+            String userInput = scanner.nextLine();
+            game.theGuess(userInput);
+            System.out.println(String.format("You have guessed %d times", game.getGuessCount()));
+            System.out.println("Current correct guesses: " + game);
 
 
+        } while (!game.checkWin() && game.getGuessCount() < game.MAXGUESSES);
 
-            }
 
-        }
-        public boolean guesses(String guess) {
-            Hangman.
-            char[] wordsToGuess = secretWords[random.nextInt(secretWords.length)].toCharArray();
-            char[] playerGuess = new char[guessAmount];
+    }
+}
 
-            for (int i = 0; i < playerGuess.length; i++){
-                playerGuess[i] = '_';
-
-            }
-            return false;
-        }

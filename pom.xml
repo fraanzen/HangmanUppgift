@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>se.ecutb.mattias</groupId>
-  <artifactId>Hangman</artifactId>
+  <artifactId>Hangman.</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>Hangman</name>
+  <name>Hangman.</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
