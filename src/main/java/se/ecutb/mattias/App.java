@@ -22,6 +22,9 @@ public class App {
             game.checkGuess(userInput);
             System.out.println(String.format("You have guessed wrong %d times", game.getGuessCount()));
             System.out.println("Current correct guesses: " + game);
+            if (game.checkWin()){
+                System.out.println("You win");
+            }
 
 
         } while (!game.checkWin() && game.getGuessCount() < game.MAXGUESSES);
