@@ -1,7 +1,5 @@
 package se.ecutb.mattias;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

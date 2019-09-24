@@ -70,14 +70,3 @@ public class Hangman{
         return String.copyValueOf(wordToGuess);
     }
 }
-
-
-/*    public boolean theGuess(char letterGuess){
-        if (secretWord.contains(letterGuess + "")){
-            for (int i = 0; i < wordToGuess.length ; i++){
-                if (letterGuess == wordToGuess[i]){
-                    wordToGuess[i] = letterGuess;
-                    guessedLetters.append(letterGuess);
-                }
-                }
- */

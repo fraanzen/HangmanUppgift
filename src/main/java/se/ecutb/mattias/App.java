@@ -1,7 +1,6 @@
 package se.ecutb.mattias;
 
 import se.ecutb.mattias.model.Hangman;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,11 +24,7 @@ public class App {
             if (game.checkWin()){
                 System.out.println("You win");
             }
-
-
         } while (!game.checkWin() && game.getGuessCount() < game.MAXGUESSES);
-
-
     }
 }
 
