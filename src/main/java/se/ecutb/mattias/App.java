@@ -17,11 +17,10 @@ public class App {
         System.out.println("******Welcome to Hangman!******\n" + "You have 8 tries to guess the secret word.\n" + "Guess a single letter or a whole word.\n" + "GOOD LUCK!");
 
         do {
-            game.getUsedLetters();
             System.out.println("Make your guess");
             String userInput = scanner.nextLine();
-            game.theGuess(userInput);
-            System.out.println(String.format("You have guessed %d times", game.getGuessCount()));
+            game.checkGuess(userInput);
+            System.out.println(String.format("You have guessed wrong %d times", game.getGuessCount()));
             System.out.println("Current correct guesses: " + game);
 
 
